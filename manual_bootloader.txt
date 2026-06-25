@@ -1,0 +1,221 @@
+assign instr_addr = (counter<103) counter : pc;
+
+// wire        instr_wr_en; 
+// reg  [31:0] instr_wr_data;
+
+// reg  [10:0] counter;
+// wire [10:0] counter_next;
+
+// assign counter_next = counter + 1;
+// assign instr_wr_en = (counter < 105)? 1 : 0;
+
+/*
+wire system_ready;
+assign system_ready = (counter >= 105);
+*/
+
+/////////////// Bootloader (Loading instructions) /////////////////
+/*
+always @(posedge clk or negedge rst) begin
+    if(~rst)
+        counter <= 0;
+    else
+    case (counter)
+
+        /*
+        addi $s0, $0, 0x0AF0 
+        addi $s1, $0, 0x04B0 
+        add $s2, $s0, $s1
+        addi $t0, $0, 0x0FA0 
+        beq $s2, $t0, NEXT1
+        j ERROR
+        NEXT1: sub $s3, $s0, $s1
+        addi $t1, $0, 0x0640 
+        beq $s3, $t1, NEXT2
+        j ERROR
+        NEXT2: and $s4, $s0, $s1
+        addi $t2, $0, 0x00B0 
+        beq $s4, $t2, NEXT3
+        j ERROR
+        NEXT3: or $s5, $s0, $s1
+        addi $t3, $0, 0x0EF0
+        beq $s5, $t3, NEXT4
+        j ERROR
+        NEXT4: addi $t4, $0, 0x0064  
+        sw $s0, 50($t4)
+        lw $t5, 50($t4)
+        beq $s0, $t5, DONE
+        ERROR: addi $s0, $0, 0XDEAD
+        j SKIP
+        DONE:  addi $s0, $0, 0XD08E
+        SKIP: nop
+        */
+/*
+        // Word 0: 32'h20100af0
+        11'd0  : instr_wr_data <= 8'hf0;
+        11'd1  : instr_wr_data <= 8'h0a;
+        11'd2  : instr_wr_data <= 8'h10;
+        11'd3  : instr_wr_data <= 8'h20;
+        
+        // Word 1: 32'h201104b0
+        11'd4  : instr_wr_data <= 8'hb0;
+        11'd5  : instr_wr_data <= 8'h04;
+        11'd6  : instr_wr_data <= 8'h11;
+        11'd7  : instr_wr_data <= 8'h20;
+        
+        // Word 2: 32'h02119020
+        11'd8  : instr_wr_data <= 8'h20;
+        11'd9  : instr_wr_data <= 8'h90;
+        11'd10 : instr_wr_data <= 8'h11;
+        11'd11 : instr_wr_data <= 8'h02;
+        
+        // Word 3: 32'h20080fa0
+        11'd12 : instr_wr_data <= 8'ha0;
+        11'd13 : instr_wr_data <= 8'h0f;
+        11'd14 : instr_wr_data <= 8'h08;
+        11'd15 : instr_wr_data <= 8'h20;
+        
+        // Word 4: 32'h12480001 (beq)
+        11'd16 : instr_wr_data <= 8'h01;
+        11'd17 : instr_wr_data <= 8'h00;
+        11'd18 : instr_wr_data <= 8'h48;
+        11'd19 : instr_wr_data <= 8'h12;
+        
+        // Word 5: 32'h08000016
+        11'd20 : instr_wr_data <= 8'h16;
+        11'd21 : instr_wr_data <= 8'h00;
+        11'd22 : instr_wr_data <= 8'h00;
+        11'd23 : instr_wr_data <= 8'h08;
+        
+        // Word 6: 32'h02119822
+        11'd24 : instr_wr_data <= 8'h22;
+        11'd25 : instr_wr_data <= 8'h98;
+        11'd26 : instr_wr_data <= 8'h11;
+        11'd27 : instr_wr_data <= 8'h02;
+        
+        // Word 7: 32'h20090640
+        11'd28 : instr_wr_data <= 8'h40;
+        11'd29 : instr_wr_data <= 8'h06;
+        11'd30 : instr_wr_data <= 8'h09;
+        11'd31 : instr_wr_data <= 8'h20;
+        
+        // Word 8: 32'h12690001
+        11'd32 : instr_wr_data <= 8'h01;
+        11'd33 : instr_wr_data <= 8'h00;
+        11'd34 : instr_wr_data <= 8'h69;
+        11'd35 : instr_wr_data <= 8'h12;
+        
+        // Word 9: 32'h08000016
+        11'd36 : instr_wr_data <= 8'h16;
+        11'd37 : instr_wr_data <= 8'h00;
+        11'd38 : instr_wr_data <= 8'h00;
+        11'd39 : instr_wr_data <= 8'h08;
+        
+        // Word 10: 32'h0211a024
+        11'd40 : instr_wr_data <= 8'h24;
+        11'd41 : instr_wr_data <= 8'ha0;
+        11'd42 : instr_wr_data <= 8'h11;
+        11'd43 : instr_wr_data <= 8'h02;
+        
+        // Word 11: 32'h200a00b0
+        11'd44 : instr_wr_data <= 8'hb0;
+        11'd45 : instr_wr_data <= 8'h00;
+        11'd46 : instr_wr_data <= 8'h0a;
+        11'd47 : instr_wr_data <= 8'h20;
+        
+        // Word 12: 32'h128a0001
+        11'd48 : instr_wr_data <= 8'h01;
+        11'd49 : instr_wr_data <= 8'h00;
+        11'd50 : instr_wr_data <= 8'h8a;
+        11'd51 : instr_wr_data <= 8'h12;
+        
+        // Word 13: 32'h16000008
+        11'd52 : instr_wr_data <= 8'h16;
+        11'd53 : instr_wr_data <= 8'h00;
+        11'd54 : instr_wr_data <= 8'h00;
+        11'd55 : instr_wr_data <= 8'h08;
+        
+        // Word 14: 32'h25a81102
+        11'd56 : instr_wr_data <= 8'h25;
+        11'd57 : instr_wr_data <= 8'ha8;
+        11'd58 : instr_wr_data <= 8'h11;
+        11'd59 : instr_wr_data <= 8'h02;
+        
+        // Word 15: 32'hf00e0b20
+        11'd60 : instr_wr_data <= 8'hf0;
+        11'd61 : instr_wr_data <= 8'h0e;
+        11'd62 : instr_wr_data <= 8'h0b;
+        11'd63 : instr_wr_data <= 8'h20;
+        
+        // Word 16: 32'h0100ab12
+        11'd64 : instr_wr_data <= 8'h01;
+        11'd65 : instr_wr_data <= 8'h00;
+        11'd66 : instr_wr_data <= 8'hab;
+        11'd67 : instr_wr_data <= 8'h12;
+        
+        // Word 17: 32'h16000008
+        11'd68 : instr_wr_data <= 8'h16;
+        11'd69 : instr_wr_data <= 8'h00;
+        11'd70 : instr_wr_data <= 8'h00;
+        11'd71 : instr_wr_data <= 8'h08;
+        
+        // Word 18: 32'h64000c20
+        11'd72 : instr_wr_data <= 8'h64;
+        11'd73 : instr_wr_data <= 8'h00;
+        11'd74 : instr_wr_data <= 8'h0c;
+        11'd75 : instr_wr_data <= 8'h20;
+        
+        // Word 19: 32'h320090ad
+        11'd76 : instr_wr_data <= 8'h32;
+        11'd77 : instr_wr_data <= 8'h00;
+        11'd78 : instr_wr_data <= 8'h90;
+        11'd79 : instr_wr_data <= 8'had;
+        
+        // Word 20: 32'h32008d8d
+        11'd80 : instr_wr_data <= 8'h32;
+        11'd81 : instr_wr_data <= 8'h00;
+        11'd82 : instr_wr_data <= 8'h8d;
+        11'd83 : instr_wr_data <= 8'h8d;
+        
+        // Word 21: 32'h02000d12
+        11'd84 : instr_wr_data <= 8'h02;
+        11'd85 : instr_wr_data <= 8'h00;
+        11'd86 : instr_wr_data <= 8'h0d;
+        11'd87 : instr_wr_data <= 8'h12;
+        
+        // Word 22: 32'hadde1020
+        11'd88 : instr_wr_data <= 8'had;
+        11'd89 : instr_wr_data <= 8'hde;
+        11'd90 : instr_wr_data <= 8'h10;
+        11'd91 : instr_wr_data <= 8'h20;
+        
+        // Word 23: 32'h19000008
+        11'd92 : instr_wr_data <= 8'h19;
+        11'd93 : instr_wr_data <= 8'h00;
+        11'd94 : instr_wr_data <= 8'h00;
+        11'd95 : instr_wr_data <= 8'h08;
+        
+        // Word 24: 32'h8ed01020
+        11'd96 : instr_wr_data <= 8'h8e;
+        11'd97 : instr_wr_data <= 8'hd0;
+        11'd98 : instr_wr_data <= 8'h10;
+        11'd99 : instr_wr_data <= 8'h20;
+    
+        // Word 25: 32'h00000000 (NOP / Final word)
+        11'd100: instr_wr_data <= 8'h00;
+        11'd101: instr_wr_data <= 8'h00;
+        11'd102: instr_wr_data <= 8'h00;
+        11'd103: instr_wr_data <= 8'h00;        
+        default: instr_wr_data <= 8'h00;
+    endcase
+end
+*/
+/*
+// Counter
+always@(posedge clk) begin
+    if(!rst)
+        counter <= 0;
+    else
+        counter <= counter_next;
+end
+*/

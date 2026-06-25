@@ -1,0 +1,2756 @@
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:01:50 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:01:51 on Mar 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:01:51 on Mar 18,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftfs5f6n".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfs5f6n
+# ** Note: $stop    : MIPS_TB.sv(16)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 16
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:05:01 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:05:02 on Mar 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 04:05:03 on Mar 18,2026, Elapsed time: 0:03:12
+# Errors: 0, Warnings: 8
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:05:03 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftnnj7sc".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnnj7sc
+# ** Note: $stop    : MIPS_TB.sv(16)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 16
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:07:55 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:07:55 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:07:56 on Mar 18,2026, Elapsed time: 0:02:53
+# Errors: 0, Warnings: 8
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:07:56 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftm6mx76".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftm6mx76
+# ** Note: $stop    : MIPS_TB.sv(16)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 16
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:08:12 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:08:12 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:08:13 on Mar 18,2026, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:08:13 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Error (suppressible): MIPS_TB.sv(10): (vopt-7063) Failed to find 'instr_mem' in hierarchical name 'instr_mem.mem'.
+#         Region: MIPS_TB
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 3
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:08:33 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:08:33 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:08:13 on Mar 18,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=2.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftj90rfg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftj90rfg
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+add wave -position end sim:/MIPS_TB/DUT/instr_mem/*
+add wave -position end  sim:/MIPS_TB/DUT/instr_mem/mem
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/Digital Electronics/System/MIPS_SINGLE_CYCLE/wave.do}
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:09:25 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:09:25 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:09:25 on Mar 18,2026, Elapsed time: 0:01:12
+# Errors: 1, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:09:25 on Mar 18,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlft5aha8d".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5aha8d
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:10:10 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:10:11 on Mar 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 04:10:11 on Mar 18,2026, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 8
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:10:11 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlft363tqj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft363tqj
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TOP.v(258)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:12:06 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:12:06 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:12:06 on Mar 18,2026, Elapsed time: 0:01:55
+# Errors: 0, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:12:06 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlfts7k13n".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfts7k13n
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TOP.v(258)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:12:22 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:12:22 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:12:24 on Mar 18,2026, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:12:24 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftkv7c4j".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkv7c4j
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TOP.v(258)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:12:33 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:12:33 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:12:33 on Mar 18,2026, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:12:33 on Mar 18,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftvvab0v".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftvvab0v
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TOP.v(258)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:19:41 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:19:41 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:19:42 on Mar 18,2026, Elapsed time: 0:07:09
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:19:42 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftmi4q0i".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmi4q0i
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TOP.v(258)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:23:11 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# ** Error: RAM.sv(21): (vlog-2730) Undefined variable: 'i'.
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# End time: 04:23:11 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/questasim64_2024.1/win64/vlog failed.
+# Error in macro ./run.do line 2
+# C:/questasim64_2024.1/win64/vlog failed.
+#     while executing
+# "vlog *.*v"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:23:42 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# ** Error: (vlog-13069) MIPS_TOP.v(303): near ".": syntax error, unexpected '.', expecting ')'.
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# ** Error: RAM.sv(21): (vlog-2730) Undefined variable: 'i'.
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# End time: 04:23:42 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/questasim64_2024.1/win64/vlog failed.
+# Error in macro ./run.do line 2
+# C:/questasim64_2024.1/win64/vlog failed.
+#     while executing
+# "vlog *.*v"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:23:53 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# ** Error: RAM.sv(21): (vlog-2730) Undefined variable: 'i'.
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# End time: 04:23:53 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/questasim64_2024.1/win64/vlog failed.
+# Error in macro ./run.do line 2
+# C:/questasim64_2024.1/win64/vlog failed.
+#     while executing
+# "vlog *.*v"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:24:39 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# ** Error: (vlog-13069) RAM.sv(23): near ":": syntax error, unexpected ':', expecting ';'.
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# End time: 04:24:39 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/questasim64_2024.1/win64/vlog failed.
+# Error in macro ./run.do line 2
+# C:/questasim64_2024.1/win64/vlog failed.
+#     while executing
+# "vlog *.*v"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:25:04 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:25:04 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:25:05 on Mar 18,2026, Elapsed time: 0:05:23
+# Errors: 4, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:25:05 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 295
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 357
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 357
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 357
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlfthc3ix9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthc3ix9
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TOP.v(258)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:25:19 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:25:19 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:25:19 on Mar 18,2026, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:25:19 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 295
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 357
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 357
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 357
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlft4igkzn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4igkzn
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TOP.v(258)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:25:35 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:25:35 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:25:35 on Mar 18,2026, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:25:35 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(7).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 295
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 357
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 357
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 357
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlft8nr8dt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8nr8dt
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TOP.v(258)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:32:33 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:32:33 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:32:33 on Mar 18,2026, Elapsed time: 0:06:58
+# Errors: 0, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:32:34 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftfqa2h7".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfqa2h7
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TB.sv(10)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TOP.v(258)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:33:27 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:33:27 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:33:28 on Mar 18,2026, Elapsed time: 0:00:54
+# Errors: 0, Warnings: 11
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:33:28 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftb92jtq".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftb92jtq
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TB.sv(10)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:36:04 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:36:04 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:36:05 on Mar 18,2026, Elapsed time: 0:02:37
+# Errors: 0, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:36:05 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftwb0g61".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftwb0g61
+# ** Warning: (vsim-7) Failed to open readmem file "Test1.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : MIPS_TB.sv(10)
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:37:45 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:37:45 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:37:46 on Mar 18,2026, Elapsed time: 0:01:41
+# Errors: 0, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:37:46 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftnt01m8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnt01m8
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:38:45 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:38:45 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:38:45 on Mar 18,2026, Elapsed time: 0:00:59
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:38:45 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftinzc41".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftinzc41
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:39:04 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:39:04 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:39:04 on Mar 18,2026, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:39:05 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftajv8af".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftajv8af
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:39:45 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:39:45 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:39:46 on Mar 18,2026, Elapsed time: 0:00:41
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:39:46 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'MIPS_TOP' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT File: MIPS_TOP.v
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 3
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/Digital Electronics/System/MIPS_SINGLE_CYCLE/wave.do}
+# could not find wave window
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:40:24 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:40:25 on Mar 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:39:46 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=2.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftnfvg2c".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnfvg2c
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:41:07 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:41:07 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:41:07 on Mar 18,2026, Elapsed time: 0:01:21
+# Errors: 1, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:41:07 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'MIPS_TOP' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT File: MIPS_TOP.v
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 3
+project open {D:/Digital Electronics/Computer Architecture/MIPS_SINGLE_CYCLE/MIPS_SINGLE_CYCLE}
+# Project file D:/Digital Electronics/Computer Architecture/MIPS_SINGLE_CYCLE/MIPS_SINGLE_CYCLE.mpf was not found.
+# Unable to open project.
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:42:28 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:42:28 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:41:07 on Mar 18,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'MIPS_TOP' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT File: MIPS_TOP.v
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 3
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:43:06 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:43:06 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:41:07 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=2.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'MIPS_TOP' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT File: MIPS_TOP.v
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 3
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:43:17 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:43:17 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:41:07 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=3, Warnings=3.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'MIPS_TOP' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT File: MIPS_TOP.v
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 3
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:43:52 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# ** Error: MIPS_TOP.v(46): (vlog-2730) Undefined variable: 'counter'.
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# End time: 04:43:52 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/questasim64_2024.1/win64/vlog failed.
+# Error in macro ./run.do line 2
+# C:/questasim64_2024.1/win64/vlog failed.
+#     while executing
+# "vlog *.*v"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:45:14 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:45:14 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:41:07 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=5, Warnings=4.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'MIPS_TOP' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT File: MIPS_TOP.v
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 3
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:46:30 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:46:30 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:41:07 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=6, Warnings=5.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 284
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 294
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 355
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftyyka6e".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftyyka6e
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/MIPS_TB/DUT/instr_wr_en'.
+# Executing ONERROR command at macro ./wave.do line 6
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/MIPS_TB/DUT/counter'.
+# Executing ONERROR command at macro ./wave.do line 29
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/MIPS_TB/DUT/counter_next'.
+# Executing ONERROR command at macro ./wave.do line 30
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:49:38 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:49:38 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:49:39 on Mar 18,2026, Elapsed time: 0:08:32
+# Errors: 6, Warnings: 13
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:49:39 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlft0ynatv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft0ynatv
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/MIPS_TB/DUT/instr_wr_en'.
+# Executing ONERROR command at macro ./wave.do line 6
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/MIPS_TB/DUT/counter'.
+# Executing ONERROR command at macro ./wave.do line 29
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/MIPS_TB/DUT/counter_next'.
+# Executing ONERROR command at macro ./wave.do line 30
+# ** Note: $stop    : MIPS_TB.sv(16)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 16
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/Digital Electronics/System/MIPS_SINGLE_CYCLE/wave.do}
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:50:44 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:50:44 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:50:45 on Mar 18,2026, Elapsed time: 0:01:06
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:50:45 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlft5zqetd".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5zqetd
+# ** Note: $stop    : MIPS_TB.sv(16)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 16
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:51:59 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:51:59 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:52:00 on Mar 18,2026, Elapsed time: 0:01:15
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:52:00 on Mar 18,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftjtvnh1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjtvnh1
+# ** Note: $stop    : MIPS_TB.sv(16)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 16
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:52:24 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:52:24 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:52:24 on Mar 18,2026, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 8
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:52:24 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Wr_Data'. The port definition is at: RAM.sv(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftykhz7j".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftykhz7j
+# ** Note: $stop    : MIPS_TB.sv(16)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 16
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:53:29 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:53:29 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:53:29 on Mar 18,2026, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 10
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:53:29 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 351
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftey6xsh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftey6xsh
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/MIPS_TB/DUT/instr_wr_data'.
+# Executing ONERROR command at macro ./wave.do line 8
+# ** Note: $stop    : MIPS_TB.sv(16)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 16
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:55:10 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:55:10 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:55:10 on Mar 18,2026, Elapsed time: 0:01:41
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:55:10 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 352
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftt8dkcj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftt8dkcj
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/MIPS_TB/DUT/instr_wr_data'.
+# Executing ONERROR command at macro ./wave.do line 8
+# ** Note: $stop    : MIPS_TB.sv(16)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 16
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 04:56:57 on Mar 18,2026
+# vlog -reportprogress 300 ALU.v CTRL_UNIT.v MIPS_TB.sv MIPS_TOP.v MUX2X1.v PC_REG.v RAM.sv RegFile.v SIGN_EXTEND.v 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TB
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 04:56:57 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:56:58 on Mar 18,2026, Elapsed time: 0:01:48
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 04:56:58 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: MIPS_TOP.v Line: 352
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftjsy0sz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjsy0sz
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/MIPS_TB/DUT/instr_wr_data'.
+# Executing ONERROR command at macro ./wave.do line 8
+# ** Note: $stop    : MIPS_TB.sv(20)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at MIPS_TB.sv line 20
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 05:12:41 on Mar 18,2026
+# vlog -reportprogress 300 rtl/ALU.v rtl/CTRL_UNIT.v rtl/MIPS_TOP.v rtl/MUX2X1.v rtl/PC_REG.v rtl/RAM.sv rtl/RegFile.v rtl/SIGN_EXTEND.v tb/MIPS_TB.sv 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# -- Compiling module MIPS_TB
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 05:12:42 on Mar 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 05:12:42 on Mar 18,2026, Elapsed time: 0:15:44
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 05:12:43 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: rtl/RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: rtl/MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: rtl/MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: rtl/MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: rtl/MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftnw5fn4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnw5fn4
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/MIPS_TB/DUT/instr_wr_data'.
+# Executing ONERROR command at macro ./wave.do line 8
+# ** Note: $stop    : tb/MIPS_TB.sv(21)
+#    Time: 1350 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at tb/MIPS_TB.sv line 21
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/Digital Electronics/System/MIPS_SINGLE_CYCLE/wave.do}
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/Digital Electronics/System/MIPS_SINGLE_CYCLE/wave.do}
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 06:48:39 on Mar 18,2026
+# vlog -reportprogress 300 rtl/ALU.v rtl/CTRL_UNIT.v rtl/MIPS_TOP.v rtl/MUX2X1.v rtl/PC_REG.v rtl/RAM.sv rtl/RegFile.v rtl/SIGN_EXTEND.v tb/MIPS_TB.sv 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# -- Compiling module MIPS_TB
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 06:48:39 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 06:48:40 on Mar 18,2026, Elapsed time: 1:35:57
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 06:48:40 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: rtl/RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: rtl/MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: rtl/MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: rtl/MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: rtl/MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftz5k4a4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftz5k4a4
+# ** Note: $stop    : tb/MIPS_TB.sv(21)
+#    Time: 1050 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at tb/MIPS_TB.sv line 21
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 06:48:59 on Mar 18,2026
+# vlog -reportprogress 300 rtl/ALU.v rtl/CTRL_UNIT.v rtl/MIPS_TOP.v rtl/MUX2X1.v rtl/PC_REG.v rtl/RAM.sv rtl/RegFile.v rtl/SIGN_EXTEND.v tb/MIPS_TB.sv 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# -- Compiling module MIPS_TB
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 06:48:59 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 06:48:59 on Mar 18,2026, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 06:48:59 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: rtl/RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: rtl/MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: rtl/MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: rtl/MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: rtl/MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlft1he3nq".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1he3nq
+# ** Note: $stop    : tb/MIPS_TB.sv(21)
+#    Time: 550 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at tb/MIPS_TB.sv line 21
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/Digital Electronics/System/MIPS_SINGLE_CYCLE/wave.do}
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 06:50:45 on Mar 18,2026
+# vlog -reportprogress 300 rtl/ALU.v rtl/CTRL_UNIT.v rtl/MIPS_TOP.v rtl/MUX2X1.v rtl/PC_REG.v rtl/RAM.sv rtl/RegFile.v rtl/SIGN_EXTEND.v tb/MIPS_TB.sv 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# -- Compiling module MIPS_TB
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 06:50:45 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 06:50:46 on Mar 18,2026, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 06:50:46 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: rtl/RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: rtl/MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: rtl/MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: rtl/MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: rtl/MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlft3a9erb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3a9erb
+# ** Note: $stop    : tb/MIPS_TB.sv(21)
+#    Time: 510 us  Iteration: 0  Instance: /MIPS_TB
+# Break in Module MIPS_TB at tb/MIPS_TB.sv line 21
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/Digital Electronics/System/MIPS_SINGLE_CYCLE/wave.do}
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 06:52:04 on Mar 18,2026
+# vlog -reportprogress 300 rtl/ALU.v rtl/CTRL_UNIT.v rtl/MIPS_TOP.v rtl/MUX2X1.v rtl/PC_REG.v rtl/RAM.sv rtl/RegFile.v rtl/SIGN_EXTEND.v tb/MIPS_TB.sv 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# -- Compiling module MIPS_TB
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 06:52:04 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 06:52:05 on Mar 18,2026, Elapsed time: 0:01:19
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 06:52:05 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: rtl/RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: rtl/MIPS_TOP.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: rtl/MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: rtl/MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: rtl/MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 352
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlfti77n08".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfti77n08
+# ** Note: $stop    : tb/MIPS_TB.sv(22)
+#    Time: 205 us  Iteration: 1  Instance: /MIPS_TB
+# Break in Module MIPS_TB at tb/MIPS_TB.sv line 22
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 07:00:09 on Mar 18,2026
+# vlog -reportprogress 300 rtl/ALU.v rtl/CTRL_UNIT.v rtl/MIPS_TOP.v rtl/MUX2X1.v rtl/PC_REG.v rtl/RAM.sv rtl/RegFile.v rtl/SIGN_EXTEND.v tb/MIPS_TB.sv 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# -- Compiling module MIPS_TB
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 07:00:09 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 07:00:10 on Mar 18,2026, Elapsed time: 0:08:05
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 07:00:10 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: rtl/RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: rtl/MIPS_TOP.v Line: 72
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: rtl/MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: rtl/MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: rtl/MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlfthqwbej".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthqwbej
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/MIPS_TB/DUT/out_led'.
+# Executing ONERROR command at macro ./wave.do line 5
+# ** Note: $stop    : tb/MIPS_TB.sv(22)
+#    Time: 205 us  Iteration: 1  Instance: /MIPS_TB
+# Break in Module MIPS_TB at tb/MIPS_TB.sv line 22
+add wave -position 3  sim:/MIPS_TB/out_check
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/Digital Electronics/System/MIPS_SINGLE_CYCLE/wave.do}
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 07:00:24 on Mar 18,2026
+# vlog -reportprogress 300 rtl/ALU.v rtl/CTRL_UNIT.v rtl/MIPS_TOP.v rtl/MUX2X1.v rtl/PC_REG.v rtl/RAM.sv rtl/RegFile.v rtl/SIGN_EXTEND.v tb/MIPS_TB.sv 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# -- Compiling module MIPS_TB
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 07:00:24 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 07:00:24 on Mar 18,2026, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 07:00:24 on Mar 18,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: rtl/RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: rtl/MIPS_TOP.v Line: 72
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: rtl/MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: rtl/MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: rtl/MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftr7746f".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftr7746f
+# ** Note: $stop    : tb/MIPS_TB.sv(22)
+#    Time: 205 us  Iteration: 1  Instance: /MIPS_TB
+# Break in Module MIPS_TB at tb/MIPS_TB.sv line 22
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 07:03:29 on Mar 18,2026
+# vlog -reportprogress 300 rtl/ALU.v rtl/CTRL_UNIT.v rtl/MIPS_TOP.v rtl/MUX2X1.v rtl/PC_REG.v rtl/RAM.sv rtl/RegFile.v rtl/SIGN_EXTEND.v tb/MIPS_TB.sv 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# -- Compiling module MIPS_TB
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 07:03:29 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 07:03:30 on Mar 18,2026, Elapsed time: 0:03:06
+# Errors: 0, Warnings: 8
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 07:03:30 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: rtl/RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: rtl/MIPS_TOP.v Line: 72
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: rtl/MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: rtl/MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: rtl/MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftke55dy".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftke55dy
+# ** Note: $stop    : tb/MIPS_TB.sv(23)
+#    Time: 215 us  Iteration: 1  Instance: /MIPS_TB
+# Break in Module MIPS_TB at tb/MIPS_TB.sv line 23
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 07:03:54 on Mar 18,2026
+# vlog -reportprogress 300 rtl/ALU.v rtl/CTRL_UNIT.v rtl/MIPS_TOP.v rtl/MUX2X1.v rtl/PC_REG.v rtl/RAM.sv rtl/RegFile.v rtl/SIGN_EXTEND.v tb/MIPS_TB.sv 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# -- Compiling module MIPS_TB
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 07:03:54 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 07:03:54 on Mar 18,2026, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 07:03:54 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: rtl/RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: rtl/MIPS_TOP.v Line: 72
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: rtl/MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: rtl/MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: rtl/MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlfttav4j1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfttav4j1
+# ** Note: $stop    : tb/MIPS_TB.sv(23)
+#    Time: 205 us  Iteration: 1  Instance: /MIPS_TB
+# Break in Module MIPS_TB at tb/MIPS_TB.sv line 23
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 07:12:32 on Mar 18,2026
+# vlog -reportprogress 300 rtl/ALU.v rtl/CTRL_UNIT.v rtl/MIPS_TOP.v rtl/MUX2X1.v rtl/PC_REG.v rtl/RAM.sv rtl/RegFile.v rtl/SIGN_EXTEND.v tb/MIPS_TB.sv 
+# -- Compiling module ALU
+# -- Compiling module CTRL_UNIT
+# -- Compiling module MIPS_TOP
+# -- Compiling module MUX2X1
+# -- Compiling module PC_REG
+# -- Compiling module RAM
+# -- Compiling module RegFile
+# -- Compiling module sign_extend
+# -- Compiling module MIPS_TB
+# 
+# Top level modules:
+# 	MIPS_TB
+# End time: 07:12:32 on Mar 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 07:12:33 on Mar 18,2026, Elapsed time: 0:08:39
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.MIPS_TB 
+# Start time: 07:12:33 on Mar 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MIPS_TB(fast)
+# Loading work.MIPS_TOP(fast)
+# Loading work.PC_REG(fast)
+# Loading work.sign_extend(fast)
+# Loading work.RAM(fast)
+# Loading work.RAM(fast__1)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.MUX2X1(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'Wr_En'. The port definition is at: rtl/RAM.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/instr_mem File: rtl/MIPS_TOP.v Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'Addr'. The port definition is at: rtl/RAM.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/data_mem File: rtl/MIPS_TOP.v Line: 72
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN0'. The port definition is at: rtl/MUX2X1.v(4).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'IN1'. The port definition is at: rtl/MUX2X1.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'OUT'. The port definition is at: rtl/MUX2X1.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /MIPS_TB/DUT/MUX3 File: rtl/MIPS_TOP.v Line: 134
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: fahim  Hostname: SE7S  ProcessID: 29976
+#           Attempting to use alternate WLF file "./wlftsd1yfz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftsd1yfz
+# ** Note: $stop    : tb/MIPS_TB.sv(23)
+#    Time: 205 us  Iteration: 1  Instance: /MIPS_TB
+# Break in Module MIPS_TB at tb/MIPS_TB.sv line 23
