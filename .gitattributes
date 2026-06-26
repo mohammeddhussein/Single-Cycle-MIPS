@@ -1,6 +1,10 @@
 *.v linguist-language=Verilog
 *.sv linguist-language=SystemVerilog
 
-mem.dat linguist-vendored
+*.v -stata
+*.sv -stata
+
 *.mem linguist-vendored
 *.hex linguist-vendored
+*.do linguist-vendored
+*.asm linguist-vendored
