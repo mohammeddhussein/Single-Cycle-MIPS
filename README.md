@@ -49,4 +49,3 @@ A specific sequence of MIPS assembly instructions is pre-loaded into the instruc
 
 ### 2. Randomized Testing (Future work)
 To ensure robust verification, the testbench utilizes SystemVerilog object-oriented programming (OOP) and randomization features.
-.
