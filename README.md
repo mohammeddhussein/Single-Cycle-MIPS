@@ -6,14 +6,13 @@ This repository contains the hardware digital design and implementation of a Sin
 This project was developed based on Computer Architecture Practice Session guidelines by Eng. Abdulkareem Abotaleb.
 
 ## Architecture Hierarchy
-The processor is modularized into several key components to ensure a clean and scalable digital design. The top-level module (`mips_top_inst`) connects the following sub-modules:
+The processor is modularized into several key components to ensure a clean and scalable digital design. The top-level module (`MIPS_TOP`) connects the following sub-modules:
 
-* **`pc_reg_inst`**: The Program Counter register utilizing an asynchronous, active-low reset.
-* **`instr_mem`**: The Instruction Memory unit.
-* **`reg_file_inst`**: A 32x32 Register File supporting simultaneous reads and synchronous writes.
-* **`alu_inst`**: The Arithmetic Logic Unit responsible for data computation.
-* **`data_mem`**: The Data Memory block parameterized for depth and width.
-* **`ctrl_unit_inst`**: The Control Unit containing both the Main Decoder and the ALU Decoder.
+* **`PC_REG`**: The Program Counter register utilizes an asynchronous, active-low reset.
+* **`RAM`**: It's used twice, once for data and the other for instructions.
+* **`RegFile`**: A 32x32 Register File supporting simultaneous reads and synchronous writes.
+* **`ALU`**: The Arithmetic Logic Unit responsible for data computation.
+* **`CTRL_UNIT`**: The Control Unit containing both the Main Decoder and the ALU Decoder.
 
 <img width="954" height="546" alt="Screenshot 2026-06-26 070428" src="https://github.com/user-attachments/assets/3e20f8d2-d034-4209-b186-40150e8bcf5f" />
 
