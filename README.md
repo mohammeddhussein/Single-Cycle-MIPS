@@ -1,0 +1,52 @@
+# Single-Cycle MIPS Architecture
+
+## Overview
+This repository contains the hardware digital design and implementation of a Single-Cycle MIPS Processor. The project encompasses the complete design hierarchy, component-level Verilog implementation, and a robust verification environment using both direct and randomized testbenches (future work).
+
+This project was developed based on Computer Architecture Practice Session guidelines by Eng. Abdulkareem Abotaleb.
+
+## Architecture Hierarchy
+The processor is modularized into several key components to ensure a clean and scalable digital design. The top-level module (`mips_top_inst`) connects the following sub-modules:
+
+* **`pc_reg_inst`**: The Program Counter register utilizing an asynchronous, active-low reset.
+* **`instr_mem`**: The Instruction Memory unit.
+* **`reg_file_inst`**: A 32x32 Register File supporting simultaneous reads and synchronous writes.
+* **`alu_inst`**: The Arithmetic Logic Unit responsible for data computation.
+* **`data_mem`**: The Data Memory block parameterized for depth and width.
+* **`ctrl_unit_inst`**: The Control Unit containing both the Main Decoder and the ALU Decoder.
+
+![MIPS Basic Architecture Diagram](https://drive.google.com/file/d/1YErhNNVYnTZh5HANdEJHTKZW9PRu5-ly/view?usp=sharing)
+
+## Supported Instructions
+The Control Unit is designed to decode and execute the following instruction types and operations:
+
+| Instruction Type | Opcode | ALU Operation | Description |
+| :--- | :--- | :--- | :--- |
+| **R-Type** | 000000 | Varies by Funct | Supports add, sub, and, or, slt |
+| **lw** | 100011 | add | Load Word |
+| **sw** | 101011 | add | Store Word |
+| **beq** | 000100 | subtract | Branch on Equal |
+| **addi** | 001000 | add | Add Immediate |
+| **j** | 000010 | N/A | Jump |
+
+![Control Unit Decoding](dhttps://drive.google.com/file/d/1Np42fytlrk9x4QusyHoBDNzQzNO-qhtP/view?usp=sharing)
+
+## ALU Functional Specification
+The ALU utilizes a 3-bit control signal (`ALUControl_2:0`) to determine the executed operation.
+
+| ALUControl | Function |
+| :--- | :--- |
+| 000 | A AND B |
+| 001 | A OR B |
+| 010 | A + B |
+| 110 | A - B |
+| 111 | SLT (Set Less Than) |
+
+## Verification Environment
+The testbench environment is implemented to thoroughly verify the processor's functionality via two distinct methods:
+
+### 1. Direct Testing
+A specific sequence of MIPS assembly instructions is pre-loaded into the instruction memory to test explicit edge cases, data forwarding (if applicable), branch logic, and basic arithmetic.
+
+### 2. Randomized Testing (Future work)
+To ensure robust verification, the testbench utilizes SystemVerilog object-oriented programming (OOP) and randomization features.
