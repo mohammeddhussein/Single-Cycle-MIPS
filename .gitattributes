@@ -1,0 +1,6 @@
+*.v linguist-language=Verilog
+*.sv linguist-language=SystemVerilog
+
+mem.dat linguist-vendored
+*.mem linguist-vendored
+*.hex linguist-vendored
